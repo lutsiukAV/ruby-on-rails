@@ -1,0 +1,16 @@
+<% @page_title = 'Estimation' %>
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('estimate_form.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<div class="wrapper-index">
+  <%= form_tag(:action => 'estimate') do %>
+      <p> <%= t('grades_list.th_mark') %></p>
+      <input class="name-field" name="mark"/>
+      <p> <%= t('grades_list.th_comment') %></p>
+      <input class="name-field" name="comment"/><br>
+      <input class="button-ok" value="OK" type="submit"/>
+  <% end %>
+</div>

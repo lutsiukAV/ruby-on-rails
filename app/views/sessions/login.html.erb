@@ -1,0 +1,17 @@
+<% @page_title = 'UserAuth | Login' -%>
+ <link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+  <h1 align="center"><%= t('login.header') %></h1>
+  <%= link_to 'EN', change_locale_path(:en) %>
+  <%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<div class="wrapper-index">
+  <%= form_tag(:action => 'login_attempt') do %>
+      <p><%= t('login.input_login') %></p>
+      <input type="text" name="username" class="name-field"/>
+      <p><%= t('login.input_password') %></p>
+      <input type="password" name="password" class="name-field"/><br>
+      <input type="submit" value="OK" class="button-ok"/>
+  <% end %>
+  <a href="http://127.0.0.1:3000/users/new"><%= t('login.link_sign_up') %></a>
+</div>

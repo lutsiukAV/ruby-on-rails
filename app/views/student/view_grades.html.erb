@@ -1,0 +1,21 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('grades_list.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<table>
+  <tr>
+    <th><%= t('grades_list.th_name') %></th>
+    <th><%= t('grades_list.th_mark') %></th>
+    <th><%= t('grades_list.th_comment') %></th>
+  </tr>
+  <% @gr.each do |g| %>
+  <tr>
+    <td><%= g[:crs] %></td>
+    <td><%= g[:mark] %></td>
+    <td><%= g[:comment] %></td>
+  </tr>
+  <% end %>
+</table>
+<a href="http://127.0.0.1:3000/student/menu"><%= t('all_users.a_to_main_menu') %></a>

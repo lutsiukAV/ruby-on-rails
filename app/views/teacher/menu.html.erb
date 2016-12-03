@@ -1,0 +1,33 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('teacher.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul class="nav-bar">
+  <li class="nav"><button class="like-link" onclick="add_show('popup-block')"><%= t('teacher.li_change_password') %></button></li>
+  <li class="nav"><button class="like-link" onclick="add_show('popup-block2')"><%= t('teacher.li_add_course') %></button></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/teacher/estimate_list"><%= t('teacher.li_estimate') %></a></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/sessions/logout"><%= t('admin.li_log_out') %></a></li>
+</ul>
+<div id="popup-block" style="visibility: hidden">
+  <%= form_tag(:action => 'change_password') do %>
+      <p><%= t('teacher.input_new_password') %> </p><br>
+      <input class="name-field" type="text" name="password"/><br>
+      <input class="button-ok" type="submit" value="OK"/>
+  <% end %>
+</div>
+<div id="popup-block2" style="visibility: hidden">
+  <%= form_tag(:action => 'add_course') do %>
+      <p><%= t('course_list.li_name') %></p><br>
+      <input class="name-field" type="text" name="name"/>
+      <p><%= t('teacher.input_hours') %></p><br>
+      <input class="name-field" type="text" name="hours"/>
+      <input class="button-ok" type="submit" value="OK"/>
+  <% end %>
+</div>
+<script>
+  function add_show(id) {
+    document.getElementById(id).style.visibility = 'visible'
+  }
+</script>

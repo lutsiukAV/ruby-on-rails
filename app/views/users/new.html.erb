@@ -1,0 +1,15 @@
+<% @page_title = 'UserAuth | Signup' %>
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+  <h1 align="center"><%= t('registration.header') %></h1>
+  <%= link_to 'EN', change_locale_path(:en) %>
+  <%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<div class="wrapper-index">
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+      <p> <%= t('registration.input_login') %></p> <br> <%= f.text_field :login%>
+      <p> <%= t('registration.input_password') %></p> <br> <%= f.password_field :password%><br>
+      <input class="button-ok" type="submit" value="Ok"/>
+  <% end %>
+  <a href="http://127.0.0.1:3000/sessions/login"><%= t('registration.link_sign_in') %></a>
+</div>

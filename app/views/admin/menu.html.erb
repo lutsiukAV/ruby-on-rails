@@ -1,0 +1,24 @@
+  <link href="/assets/style.css" media="screen" rel="stylesheet"/>
+  <div class="header">
+  <h1 align="center"><%= t('admin.header') %></h1>
+  <%= link_to 'EN', change_locale_path(:en) %>
+  <%= link_to 'UA', change_locale_path(:uk) %>
+  </div>
+<ul class="nav-bar">
+  <li class="nav"><button class="like-link" onclick="add_show('popup-block')"><%= t('admin.li_add') %></button></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/admin/show_all"><%= t('admin.li_show') %></a></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/admin/system_log"><%= t('admin.li_attendance') %></a></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/sessions/logout"><%= t('admin.li_log_out') %></a></li>
+</ul>
+<div id="popup-block" style="visibility: hidden">
+  <%= form_tag(:action => 'create_teacher') do %>
+      <p><%= t('login.input_login') %></p>
+      <input class="name-field" name="login"/>
+      <input type="submit" class="button-ok" value="OK"/>
+  <% end %>
+</div>
+<script>
+  function add_show(id) {
+    document.getElementById(id).style.visibility = 'visible'
+  }
+</script>

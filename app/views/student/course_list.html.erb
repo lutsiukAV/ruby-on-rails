@@ -1,0 +1,13 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('course_list.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul>
+  <% @crs.each do |c| %>
+      <li><%= t('course_list.li_name') %> <%= c[:name] %> <%= t('course_list.li_teacher') %> <%= c[:user] %>
+            <a href="http://127.0.0.1:3000/student/follow_course?cid=<%= c[:id] %>"><%= t('course_list.link_follow') %></a>
+      </li>
+  <% end %>
+</ul>

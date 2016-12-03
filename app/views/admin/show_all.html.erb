@@ -1,0 +1,17 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('all_users.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul>
+  <% groups = ['admin', 'teacher', 'student'] %>
+  <% @users.each do |usr| %>
+  <li><%= t('login.input_login') %> <%= usr.login.inspect %> <%= t('all_users.li_group') %>: <%= groups[usr.group.inspect.to_i - 1] %>
+    <% unless usr.group.inspect.to_i == 1 %>
+      <a href="http://127.0.0.1:3000/admin/delete_user?id=<%= usr.id.inspect %>"><%= t('all_users.a_delete') %></a>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
+<a href="http://127.0.0.1:3000/admin/menu"><%= t('all_users.a_to_main_menu') %></a>

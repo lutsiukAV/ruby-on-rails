@@ -1,0 +1,11 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('student.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul class="nav-bar">
+  <li class="nav"><a href="http://127.0.0.1:3000/student/course_list"><%= t('student.li_follow_course') %></a></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/student/view_grades"><%= t('student.li_view_grades') %></a></li>
+  <li class="nav"><a href="http://127.0.0.1:3000/sessions/logout"><%= t('admin.li_log_out') %></a></li>
+</ul>

@@ -1,0 +1,11 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('estimation.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul>
+  <% @grade.each do |g| %>
+    <li><%= g[:login] %>, <%= g[:course] %> <a href="http://127.0.0.1:3000/teacher/estimate_page?login=<%= g[:uid] %>&course=<%= g[:cid] %>"><%= t('estimation.header') %></a></li>
+  <% end %>
+</ul>

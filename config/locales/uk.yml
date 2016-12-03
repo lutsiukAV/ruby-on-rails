@@ -1,0 +1,71 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+uk:
+  login:
+    header: Ласкаво просимо до факультету
+    input_login: Логін
+    input_password: Пароль
+    link_sign_up: Не маю профілю
+  registration:
+      header: Реєстрація
+      input_login: Логін
+      input_password: Пароль
+      link_sign_in: Я вже маю сторінку
+  admin:
+      header: Вітаємо адмін
+      li_add: Додати викладача
+      li_show: Усі користувачі
+      li_attendance: Відвідуваність
+      li_log_out: Вийти
+  all_users:
+      header: Всі користувачі
+      li_group: Роль
+      a_delete: Видалити
+      a_to_main_menu: На головну
+  attendance:
+      header: Відвідуваність
+      li_time: Час
+  student:
+      header: Сторінка студента
+      li_follow_course: Записатися на курс
+      li_view_grades: Подивитися результати
+  course_list:
+    header: Список курсів
+    li_name: Назва
+    li_teacher: Викладач
+    link_follow: Записатися
+  grades_list:
+      header: Мої оцінки
+      th_name: Назва
+      th_mark: Оцінка
+      th_comment: Коментар
+  teacher:
+      header: Викладач
+      li_change_password: Змінити пароль
+      li_add_course: Додати курс
+      li_estimate: Оцінити
+      input_new_password: Новий пароль
+      input_hours: Години
+  estimate_form:
+      header: Форма оцінювання
+  estimation:
+      header: Оцінювання

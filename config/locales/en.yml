@@ -1,0 +1,71 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  login:
+    header: Faculty
+    input_login: Username
+    input_password: Password
+    link_sign_up: Sign UP
+  registration:
+    header: Sign Up
+    input_login: Username
+    input_password: Password
+    link_sign_in: Have an account
+  admin:
+    header: Welcome dear admin
+    li_add: Add teacher
+    li_show: Show all
+    li_attendance: Attendance
+    li_log_out: Log out
+  all_users:
+    header: All users
+    li_group: Group
+    a_delete: Delete
+    a_to_main_menu: To main menu
+  attendance:
+    header: Attendance
+    li_time: Time
+  student:
+    header: Student
+    li_follow_course: Follow course
+    li_view_grades: View grades
+  course_list:
+    header: Course list
+    li_name: Name
+    li_teacher: Teacher
+    link_follow: Follow
+  grades_list:
+    header: My grades
+    th_name: Name
+    th_mark: Mark
+    th_comment: Comment
+  teacher:
+    header: Teacher
+    li_change_password: Change password
+    li_add_course: Add new course
+    li_estimate: Estimate
+    input_new_password: New password
+    input_hours: Hours
+  estimate_form:
+    header: Estimate form
+  estimation:
+    header: Estimation

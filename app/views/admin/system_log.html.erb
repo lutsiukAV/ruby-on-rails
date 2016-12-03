@@ -1,0 +1,12 @@
+<link href="/assets/style.css" media="screen" rel="stylesheet"/>
+<div class="header">
+<h1 align="center"><%= t('attendance.header') %></h1>
+<%= link_to 'EN', change_locale_path(:en) %>
+<%= link_to 'UA', change_locale_path(:uk) %>
+</div>
+<ul style="text-align: center; width: 100%">
+  <% @rec.each do |r| %>
+      <li><%= t('login.input_login') %> <%= r.name.inspect %> <%= t('attendance.li_time') %> <%= r.created_at.in_time_zone(2) %></li>
+  <% end %>
+</ul>
+<a href="http://127.0.0.1:3000/admin/menu"><%= t('all_users.a_to_main_menu') %></a>
